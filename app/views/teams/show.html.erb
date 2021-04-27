@@ -48,6 +48,11 @@
                         <%= link_to I18n.t('views.button.delete'), team_assign_path(@team, assign), method: :delete, class: 'btn btn-sm btn-danger' %>
                         <% end %>
                       </td>
+                      <td>
+                        <% if team_owner? && current_user != assign.user %>
+                          <%= link_to I18n.t('views.button.change_owner'), team_path(@team, params:{ team: {owner_id: assign.user.id} }), method: :put, data:{ confirm: "チームオーナーを変更しますか？"}, class:'btn btn-sm btn-warning' %>
+                        <% end %>
+                      </td>
                     </tr>
                   <% end %>
                 </tbody>
