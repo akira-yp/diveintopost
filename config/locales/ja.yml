@@ -222,6 +222,8 @@ ja:
       failed_to_save_team: '保存に失敗しました、、'
       update_team: 'チーム更新に成功しました！'
       delegate_team: 'チームオーナーを変更しました！'
+      delegated_team: 'あなたへ権限が移譲されたチーム'
+      assigned_owner: 'チームオーナーに指名されました'
       delete_team: 'チーム削除に成功しました！'
       update_profile: 'プロフィールを編集しました！'
       complete_registration: '登録完了'

@@ -41,6 +41,7 @@ class TeamsController < ApplicationController
 
   def delegate
     if @team.update(team_params)
+      AssignMailer.delegate_mail(@team).deliver
       redirect_to @team,notice: I18n.t('views.messages.delegate_team')
     else
       flash.now[:error] = I18n.t('views.messages.failed_to_save_team')
