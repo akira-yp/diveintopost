@@ -50,7 +50,7 @@
                       </td>
                       <td>
                         <% if team_owner? && current_user != assign.user %>
-                          <%= link_to I18n.t('views.button.change_owner'), team_path(@team, params:{ team: {owner_id: assign.user.id} }), method: :put, data:{ confirm: "チームオーナーを変更しますか？"}, class:'btn btn-sm btn-warning' %>
+                          <%= link_to I18n.t('views.button.change_owner'), delegate_team_path(@team.id, params:{ team: {owner_id: assign.user.id} }), method: :put, data:{ confirm: "チームオーナーを変更しますか？"}, class:'btn btn-sm btn-warning' %>
                         <% end %>
                       </td>
                     </tr>
