@@ -6,4 +6,10 @@ class AssignMailer < ApplicationMailer
     @password = password
     mail to: @email, subject: I18n.t('views.messages.complete_registration')
   end
+
+  def delegate_mail(team)
+    @email = team.owner.email
+    @team = team
+    mail to: @email, subject: I18n.t('views.messages.assigned_owner')
+  end
 end
