@@ -25,6 +25,6 @@ module ApplicationHelper
   end
 
   def team_owner?
-    current_user.id == @team.owner_id
+    current_user.id == @working_team.owner_id
   end
 end
